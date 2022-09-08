@@ -1,38 +1,304 @@
+:root {
+  --global-color-orange: #FB5447;
+  --global-color-black: black;
+  --global-color-white: #EFEBE3;
+}
+
+html {overflow: hidden;}
+
+body {overflow-y: scroll;}
+
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--global-color-white);
+  color: var(--global-color-black);
   position: relative;
+  text-align: center;
+  font-size: 16px;
+  height: 100vh;
 }
 
-#Layer_1 {
-  height: 493px;
-  width: 493px;
+.grid-section {
+  background-color: var(--global-color-black);
+  color: var(--global-color-white);
+  margin-top: 2rem;
 }
 
-#Layer_1 .st0 {fill:#FFFFFF;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: rift, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
 
-#Layer_1 .st1 {
-  fill:none;
-  stroke:#FFFFFF;
-  stroke-width:6.1827;
-  stroke-miterlimit:10;
+a {color: var(--global-color-orange);}
+.intro-section h2 {color: var(--global-color-orange);}
+
+header {padding: 3rem 1rem 0;}
+section {
+  padding: 1.5rem 1rem;
+}
+
+footer p {font-size: 0.8rem}
+footer {padding: 1rem}
+
+h2 {font-size: 3rem; line-height: 3rem; margin: 1rem 0 1em;}
+h3 {font-size: 1.2rem; line-height: 1.2rem; margin: 1em 0;}
+
+.pop-bio-copy h3 {margin-top: 1rem;}
+
+.bio {margin-bottom: 1rem;}
+
+#stamp {height: 150px; width: 150px;}
+#NYU-logo {height: 50px}
+
+#stamp,
+#NYU-logo .st0 {fill: var(--global-color-orange);}
+
+header, .banner {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header p, .banner p {
+  font-family: rift, sans-serif;
+  line-height: 1em;
+  font-style: italic;
+  color: var(--global-color-orange);
+}
+
+header p, .banner .title {
+  font-weight: 700;
+}
+
+header p {
+  font-size: 2rem;
+}
+
+.banner p {
+  font-size: 4rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 550px) {
+  .banner .title {
+    width: 100%;
+  }
+  .banner .title br {
+    display: none;
+  }
+}
+
+.time {
+  display: block;
+  font-size: 0.8em;
+}
+
+#trailer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1080px;
+  border: none;
+}
+
+@media screen and (max-width: 1080px) {
+  #trailer {
+    height: 56.3vw;
+  }
+}
+
+.grid-wrap {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 800px) {
+  .grid-wrap {
+    max-width: 80%;
+    margin: auto;
+  }
 }
 
 .bio {
   display: inline-block;
   max-width: 200px;
   text-align: center;
-  padding: 10px;
+  cursor: pointer;
+  border: solid 1px var(--global-color-black);
 }
 
-.bio img {width: 100%;}
+.bio:hover {
+  background-color: var(--global-color-orange);
+  border-color: var(--global-color-orange);
+  color: var(--global-color-black)
+}
 
-.pop {
-  position: absolute;
+.bio img {
+  width: 100%;
+  display: block;
+}
+
+figure {margin: 0}
+
+.mask {
+  position: fixed;
+  box-sizing: border-box;
   top: 0;
   left: 0;
-  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  overflow-y: scroll;
+}
+
+.pop {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  background-color: var(--global-color-black);
+  padding: 1rem;
+}
+
+.btn-wrap {
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+
+.pop-bio-film {order: 1}
+.pop-bio {
+  order: 2;
+  background-color: var(--global-color-white);
+}
+
+.pop img {width: 100%}
+
+.pop-bio-copy {
+  background-color: var(--global-color-white);
+  color: var(--global-color-black);
+  padding: 0 1rem 1rem;
+}
+
+.pop-bio-copy a {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+}
+
+.pop-bio-copy p {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 1rem;
+  background-color: var(--global-color-orange);
   color: black;
-  margin: 10px;
-  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: rift, sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: skewX(-10deg);
+}
+
+.btn-wrap button {
+  border: solid 1px var(--global-color-orange);
+  background-color: var(--global-color-black);
+  color: var(--global-color-orange);
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.btn-wrap button:hover {
+  background-color: var(--global-color-orange);
+  color: var(--global-color-black);
+}
+
+.pop-film figcaption {
+  font-size: 0.8rem;
+  line-height: 1.2em;
+  color: var(--global-color-white);
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 450px) {
+  .pop-bio {
+    display: flex;
+    align-items: stretch;
+  }
+  .pop-bio img {
+    width: calc(100% / 3);
+    height: 100%;
+    object-fit: cover;
+  }
+  .pop-bio-copy {
+    width: calc(((100% / 3) - 2rem) * 2);
+    padding: 0 2rem 2rem 2rem;
+  }
+  .pop-bio-copy a {padding: 0 1rem 1rem 0;}
+  .pop {
+    text-align: left;
+    background-color: var(--global-color-black);
+    padding: 0.5rem 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .intro-section {
+    max-width: 60%;
+    margin: auto;
+  }
+  .pop-bio {
+    width: 60%;
+    order: 1;
+  }
+  .pop-bio img {
+    width: calc(100% / 3);
+  }
+  .pop-film {
+    width: 40%;
+    order: 2;
+  }
+  .pop {
+    margin: auto;
+    width: 96%;
+    padding: 0.5rem 1rem 2rem;
+  }
+  .mask {
+    display: flex;
+    justify-content: center;
+  }
+  .pop-film {position: relative;}
+  .pop-film figcaption {
+    padding: 0.5rem 1rem 1rem;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+  }
+  .pop-film img {
+    height: 100%;
+    object-fit: cover;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
