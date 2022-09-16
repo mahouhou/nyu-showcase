@@ -1,3 +1,11 @@
+# Intro
+
+This application was designed for the NYU Tisch 2nd year film showcase, 2022. The purpose was to display film and bio info for a class of students, details about the show and links to book tickets.
+
+View the live website [here](https://www.2ndyearshowcase.com/).
+
+This project has been published as part of the portfolio of designer & developer, Freja Smith. It was built using Create React App.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
